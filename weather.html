@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;"
+        > احوال الطقس في الرياض</h1>
+    </div>
+    <div class="All">
+    </div>
+
+    <script>
+        url = "https://api.openweathermap.org/data/2.5/weather?q=Riyadh&appid=eacd96a3cfd98ea61ba720a131e9005b"
+        console.log(url)
+    async function PrayerTime(){
+        let res = await fetch(url)
+        let data = await res.json();
+        console.log(data.main)
+        let divAll = document.querySelector(".all")
+        data.main.forEach(e => {
+            let divA = document.createElement("div")
+            let name = document.createElement("h1")
+            let temp = document.createElement("p")
+            let humidity = document.createElement("p")
+            name.innerText = e.name
+            name.innerText = e.temp
+            name.innerText = e.humidity
+            divA.append(name)
+            divA.append(temp)
+            divA.append(humidity)
+            divAll.append(divA)
+
+         });
+    }
+    PrayerTime()
+ </script>
+
+</body>
+</html>

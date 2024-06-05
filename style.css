@@ -1,0 +1,43 @@
+body {
+    background-image: url("backgraund.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    border-radius: 20px;
+    width: 15vw;
+    height: 18vh;
+    background-color: white;
+    margin-left: 35vw;
+    margin-top: 10vw;
+}
+.control-input{
+    margin: 20px;
+}
+a{
+    color: black;
+    text-align: center;
+}
+#username , #nameU, #email, #Password  {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: rgb(117, 117, 232);
+    width: 20vw;
+    height: 4vh;
+
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#btn{
+    border-radius: 10px;
+    border-color: rgb(117, 117, 232);
+    background-color: white;
+}
