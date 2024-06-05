@@ -21,8 +21,8 @@
         let res = await fetch(url)
         let data = await res.json();
         console.log(data.main)
+    data.main.for(e => {
         let divAll = document.querySelector(".all")
-        data.main.forEach(e => {
             let divA = document.createElement("div")
             let name = document.createElement("h1")
             let temp = document.createElement("p")
@@ -34,11 +34,8 @@
             divA.append(temp)
             divA.append(humidity)
             divAll.append(divA)
-
          });
     }
-    PrayerTime()
  </script>
-
 </body>
 </html>
